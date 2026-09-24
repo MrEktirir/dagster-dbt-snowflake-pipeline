@@ -1,0 +1,12 @@
+version: 2
+
+sources:
+  - name: raw
+    database: TAXI_DATA
+    schema: RAW
+    tables:
+      - name: taxi_trips
+        description: "Raw NYC yellow taxi trip data loaded from S3/CloudFront by Dagster"
+        meta:
+          dagster:
+            asset_key: ["taxi_trips"]

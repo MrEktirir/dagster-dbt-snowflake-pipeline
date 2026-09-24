@@ -1,0 +1,22 @@
+version: 2
+
+models:
+  - name: stg_taxi_trips
+    description: "Cleaned and renamed staging model for NYC yellow taxi trips"
+    config:
+      tags: ["staging"]
+    columns:
+      - name: pickup_at
+        description: "Trip pickup timestamp"
+        tests:
+          - not_null
+
+      - name: trip_distance
+        description: "Trip distance in miles"
+        tests:
+          - not_null
+
+      - name: total_amount
+        description: "Total fare charged to the passenger"
+        tests:
+          - not_null
